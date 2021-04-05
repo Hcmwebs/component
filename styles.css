@@ -69,28 +69,26 @@ main{
 }
 
 .imageWrapper{
-  width: 150px;
+  width: 200px;
   height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
   margin: 0 auto;
   position: relative;
+  transition:all 0.2s ease-in-out;
+  cursor: pointer;
 }
-.imageWrapper:before{
-  content:'';
-  width: 150px;
-  height: 200px;
-  margin: 0 auto;
-  position:absolute;
-  top: -20px;
-  left: 20px;
-  border-radius: .5rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  z-index: -1;
+
+.imageWrapper:hover{
+    border: 5px solid rgba(255, 255, 255,0.7);
 }
 
 .imageWrapper img{
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius:.5rem;
 }
 .card__body{
 width: 90%;
@@ -114,7 +112,7 @@ margin-top: 2rem;
   padding: 0.5rem 2.5rem;
   border:none;
   border-radius: 2rem;
-  background-color: rgb(100, 26, 184);
+  background-color: rgba(19, 42, 121, 0.859);
   color: rgba(255,255,255,0.8);
 }
 .text p{
@@ -134,7 +132,4 @@ margin-top: 2rem;
     flex-direction: row;
   }
 
-  .card__body{
-    border-left: 1px solid rgba(255,255,255,0.4);
-  }
 }
